@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  h1 {
+    color: #e91e63;
+    font-size: 28px;
+    margin: 0;
+    padding: 10px 0;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 10px 0;
+  }
+
+  .heart {
+    display: inline-block;
+    margin: 0 5px;
+    animation: heartbeat 1.5s infinite;
+  }
+
+  @keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+  }
+
+  .hidden-heart {
+    position: fixed;
+    pointer-events: none;
+    animation: fadeIn 1.5s ease-in-out infinite alternate;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+</style>
+<title>Feliz Primer Mes, Mi Amor</title>
+</head>
+<body>
+<div class="container">
+  <h1>Feliz Primer Mes, Belu de mi vida</h1>
+  <p>¡Hola mi amor! Quiero celebrar este hermoso primer mes a tu lado. Cada día contigo ha sido una bendición. Tu amor ilumina mi vida como el sol en el cielo. Eres la razón por la que sonrío cada mañana y la inspiración detrás de mis sueños.</p>
+  <p>Quiero agradecerte por tu amor incondicional, por cada risa compartida y cada momento especial. Tú haces que mi corazón lata más rápido, como un latido de un corazón en esta página: <span class="heart">❤️</span>.</p>
+  <p>Para hacerte sonreír, ¡vamos a jugar un juego! Intenta encontrar el corazón oculto en esta página.</p>
+  <div class="hidden-heart">
+    <span class="heart">❤️</span>
+  </div>
+  <p>Espero con ansias cada día a tu lado y estoy emocionado por el futuro que construiremos juntos. Eres mi confidente, mi apoyo y mi amor eterno. Te amo más de lo que las palabras pueden expresar.</p>
+  <p>Con todo mi cariño,</p>
+  <p>ABUSTIN</p>
+</div>
+<script>
+  const hiddenHeart = document.querySelector(".hidden-heart");
+  document.addEventListener("mousemove", (event) => {
+    hiddenHeart.style.left = event.clientX + "px";
+    hiddenHeart.style.top = event.clientY + "px";
+  });
+</script>
+</body>
+</html>
